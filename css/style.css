@@ -5,8 +5,9 @@ body {
   font: 14px/1.5 Roboto, Helvica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #E6E5EB;
 }
+
 /* Global */
 .container {
   width: 90%;
@@ -16,14 +17,14 @@ body {
 
 /* Header */
 header {
-  background: #BFBFBF;
-  color: #000;
+  background: #000000;
+  color: #fff;
   padding: 10px  0;
 }
 nav img {
   position: relative;
   float: left;
-  margin-top: 7px;
+  margin-top: 4px;
 }
 header h1 {
   text-transform: capitalize;
@@ -35,7 +36,7 @@ header h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  width: 100%;
 }
 /* Bus List Boxes */
 .busLines h2 {
@@ -52,7 +53,6 @@ header h1 {
   align-items: center;
   background-color: white;
   line-height: 1.25em;
-  /* vertical-align: middle; */
 }
 .bus-header {
   grid-template-columns: .7fr 2.3fr 1fr;
@@ -73,11 +73,17 @@ header h1 {
   font-size: 1.15em;
   text-align: left;
 }
-
-footer {
-  background-color: #BFBFBF;
+.bus-box {
+  border-radius: 5px;
+  overflow:hidden;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+}
 #toolnav img {
   width: 24px;
   align-items: center;
@@ -102,11 +108,9 @@ footer {
  width: 360px;
 }
 }
-/* <!--large ce,,cellphones  --> */
+/* <!--large cellphones  --> */
 @media only screen and (min-width: 411px) {
   #map img {
     width: 400px;
   }
 }
-/* <!-- grid-template-columns: 200px 1fr 2fr min-content; --> */
-/* <!-- grid-template-columns: 1fr minmax(200px, 1fr); --> */
