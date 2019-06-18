@@ -20,6 +20,7 @@ body {
 /* STATUS BAR */
 .status_bar{
   position: fixed;
+  z-index: 1; /* to fix scroll issue */
   top: 0;
   width: 100%;
 }
@@ -33,6 +34,7 @@ header {
   color: #000000;
   padding: 15px 0 15px 0;
   position: fixed;
+  z-index: 1; /* to fix scroll issue */
   top: 17px;
   width: 100%;
   box-shadow: 1px 1px 5px #DADADA;
