@@ -1,116 +1,162 @@
 *, *::after, *::before  {
   box-sizing: border-box;
 }
+
+/******* Global ******/
 body {
   font: 14px/1.5 Roboto, Helvica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #E6E5EB;
+  background-color: #F8F8F8;
 }
-
-/* Global */
 .container {
   width: 90%;
   margin: auto;
   overflow: hidden;
 }
 
-/* Header */
-header {
-  background: #000000;
-  color: #fff;
-  padding: 10px  0;
+/******** Header ******/
+
+/* STATUS BAR */
+.status_bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-nav img {
+.statusBarImage {
+  width: 100%!important;
+}
+
+/* Top Nav Bar */
+header {
+  background: #DADADA;
+  color: #000000;
+  padding: 15px 0 15px 0;
+  position: fixed;
+  top: 17px;
+  width: 100%;
+}
+.backImage {
   position: relative;
   float: left;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 header h1 {
-  text-transform: capitalize;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: bold;
   padding-left: 30px;
 }
-#map img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+
+/******* Bus List Boxes ******/
+h2 {
+  font-size: 1.2em;
+  color: #5A5863;
 }
-/* Bus List Boxes */
-.busLines h2 {
- font-variant-caps:  small-caps;
- font-size: 1.2em;
- padding-top: 10px;
+.busLines {
+  padding-top: 100px;
 }
+/*  bus icon */
+.direction img  {
+  width: 18px;
+  position: relative;
+  float: left;
+}
+ .direction{
+  font-variant-caps: all-petite-caps;
+  margin: 1%;
+}
+
+ /* Draw a line decoration */
+h2 span {
+   display: inline-block;
+   position: relative;
+ }
+
+h2 span:after {
+   content: "";
+   position: absolute;
+   height: 16px;
+   border-bottom: 2px solid #DADADA;
+   width: 370%;
+   margin-left: 10px;
+ }
+/* Line direction End */
+
+/* Arrow right */
+.busLines img {
+  width: 20px;
+  margin: 2px;
+}
+
+/* Bus grid information begin */
 .bus,
 .bus-header {
   display: grid;
-  grid-template-columns: .3fr .4fr 2.3fr 1fr;
-  padding: 2% 2%;
-  border-bottom: 1.5px solid lightgrey;
+  grid-template-columns: .5fr 1.2fr 1.1fr .2fr;
   align-items: center;
-  background-color: white;
   line-height: 1.25em;
+  grid-column-gap: 5px;
+  margin: auto;
+}
+.bus {
+  background-color: white;
+  padding: 4%;
+  border-bottom: 1px solid #DADADA;
 }
 .bus-header {
-  grid-template-columns: .7fr 2.3fr 1fr;
-  font-variant-caps:  all-small-caps;
   font-weight: normal;
-  color: gray;
+  color: #5A5863;
+  padding: 2% 2%;
 }
-.header-line {
-  padding-left: 5px;
-}
-.bus img  {
-  width: 20px;
-  position: relative;
+li img {
+  position: relative ;
   float: right;
+  height: 14px;
+  padding-left: 6px;
 }
+
 .bus-number {
   font-weight: bold;
-  font-size: 1.15em;
+  font-size: 1.6em;
   text-align: left;
+  line-height: 18px;
+}
+.bus-frequency {
+  text-align: right;
+}
+.bold_number {
+  font-weight: bold;
 }
 .bus-box {
-  border-radius: 5px;
   overflow:hidden;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 5px #DADADA;
+  border-radius: 5px;
 }
+.bus:hover {
+   background: #FCE9CC;
+   text-decoration: underline;
+}
+/* Bus grid information end */
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #000000;
-}
-#toolnav img {
-  width: 24px;
-  align-items: center;
-  vertical-align: middle;
-  margin-top: 5px;
-  margin-bottom: 7px;
-}
-#toolnav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #DADADA;
+  font-size: .8em;
 }
 
- /* <!-- small cellphones  --> */
-@media only screen (min-width: 320px) {
-#map img {
-  width: 310px;
+.col {
+  vertical-align: middle;
+  text-align: center;
+  margin: 2% 0;
+  min-width: 57px;
+  float:  left;
+  width: 25%;
 }
-/* <!-- madium cellphones  --> */
-@media only screen (min-width: 375px) {
-#map img {
- width: 360px;
-}
-}
-/* <!--large cellphones  --> */
-@media only screen and (min-width: 411px) {
-  #map img {
-    width: 400px;
-  }
+
+#toolnav img {
+  width: 24px!important;
+  height: 24px!important;
 }
