@@ -4,7 +4,7 @@
 
 /******* Global ******/
 body {
-  font: 14px/1.5 Roboto, Helvica, sans-serif;
+  font: 16px/1.5 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   background-color: #F8F8F8;
@@ -20,9 +20,9 @@ body {
 /* STATUS BAR */
 .status_bar{
   position: fixed;
-  z-index: 1; /* to fix scroll issue */
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 .statusBarImage {
   width: 100%!important;
@@ -34,15 +34,15 @@ header {
   color: #000000;
   padding: 15px 0 15px 0;
   position: fixed;
-  z-index: 1; /* to fix scroll issue */
   top: 17px;
   width: 100%;
   box-shadow: 1px 1px 5px #DADADA;
+  z-index: 1;
 }
 .backImage {
   position: relative;
   float: left;
-  margin-top: 8px;
+  margin-top:11px;
 }
 header h1 {
   font-size: 1.6em;
@@ -56,7 +56,8 @@ h2 {
   color: #5A5863;
 }
 .busLines {
-  padding-top: 100px;
+  padding-top: 110px;
+  padding-bottom: 70px;
 }
 /*  bus icon */
 .direction img  {
@@ -66,7 +67,7 @@ h2 {
 }
  .direction{
   font-variant-caps: all-petite-caps;
-  margin: 2%;
+  margin: 1%;
 }
 
  /* Draw a line decoration */
@@ -95,7 +96,7 @@ h2 span:after {
 .bus,
 .bus-header {
   display: grid;
-  grid-template-columns: .5fr 1.2fr 1.1fr .2fr;
+  grid-template-columns: 1fr 1fr .8fr .2fr;
   align-items: center;
   line-height: 1.25em;
   grid-column-gap: 5px;
@@ -118,17 +119,25 @@ li img {
   padding-left: 6px;
 }
 
-.bus-number {
+.bus-number h3{
   font-weight: bold;
-  font-size: 1.6em;
-  text-align: left;
-  line-height: 18px;
+  font-size: 1.5em;
+}
+.bus-number h4{
+  font-weight: lighter;
+  font-size: .8em;
+  line-height: 1.2em;
 }
 .bus-frequency {
   text-align: right;
+  line-height: 1.15em;
 }
 .bold_number {
   font-weight: bold;
+  font-size: 1.1em;
+}
+.bus-arrival {
+  text-align: right;
 }
 .bus-box {
   overflow:hidden;
