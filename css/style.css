@@ -1,112 +1,174 @@
 *, *::after, *::before  {
   box-sizing: border-box;
 }
+
+/******* Global ******/
 body {
-  font: 14px/1.5 Roboto, Helvica, sans-serif;
+  font: 16px/1.5 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #F8F8F8;
 }
-/* Global */
 .container {
   width: 90%;
   margin: auto;
   overflow: hidden;
 }
 
-/* Header */
-header {
-  background: #BFBFBF;
-  color: #000;
-  padding: 10px  0;
+/******** Header ******/
+
+/* STATUS BAR */
+.status_bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
-nav img {
+.statusBarImage {
+  width: 100%!important;
+}
+
+/* Top Nav Bar */
+header {
+  background: #DADADA;
+  color: #000000;
+  padding: 15px 0 15px 0;
+  position: fixed;
+  top: 17px;
+  width: 100%;
+  box-shadow: 1px 1px 5px #DADADA;
+  z-index: 1;
+}
+.backImage {
   position: relative;
   float: left;
-  margin-top: 7px;
+  margin-top:11px;
 }
 header h1 {
-  text-transform: capitalize;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: bold;
   padding-left: 30px;
 }
-#map img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 360px;
+
+/******* Bus List Boxes ******/
+h2 {
+  font-size: 1.2em;
+  color: #5A5863;
 }
-/* Bus List Boxes */
-.busLines h2 {
- font-variant-caps:  small-caps;
- font-size: 1.2em;
- padding-top: 10px;
+.busLines {
+  padding-top: 110px;
+  padding-bottom: 70px;
 }
+/*  bus icon */
+.direction img  {
+  width: 18px;
+  position: relative;
+  float: left;
+}
+ .direction{
+  font-variant-caps: all-petite-caps;
+  margin: 1%;
+}
+
+ /* Draw a line decoration */
+h2 span {
+   display: inline-block;
+   position: relative;
+ }
+
+h2 span:after {
+   content: "";
+   position: absolute;
+   height: 16px;
+   border-bottom: 2px solid #DADADA;
+   width: 370%;
+   margin-left: 10px;
+ }
+/* Line direction End */
+
+/* Arrow right */
+.busLines img {
+  width: 20px;
+  margin: 2px;
+}
+
+/* Bus grid information begin */
 .bus,
 .bus-header {
   display: grid;
-  grid-template-columns: .3fr .4fr 2.3fr 1fr;
-  padding: 2% 2%;
-  border-bottom: 1.5px solid lightgrey;
+  grid-template-columns: 1fr 1fr .8fr .2fr;
   align-items: center;
-  background-color: white;
   line-height: 1.25em;
-  /* vertical-align: middle; */
+  grid-column-gap: 5px;
+  margin: auto;
+}
+.bus {
+  background-color: white;
+  padding: 4%;
+  border-bottom: 1px solid #DADADA;
 }
 .bus-header {
-  grid-template-columns: .7fr 2.3fr 1fr;
-  font-variant-caps:  all-small-caps;
   font-weight: normal;
-  color: gray;
+  color: #5A5863;
+  padding: 2% 2%;
 }
-.header-line {
-  padding-left: 5px;
-}
-.bus img  {
-  width: 20px;
-  position: relative;
+li img {
+  position: relative ;
   float: right;
-}
-.bus-number {
-  font-weight: bold;
-  font-size: 1.15em;
-  text-align: left;
+  height: 14px;
+  padding-left: 6px;
 }
 
+.bus-number h3{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.bus-number h4{
+  font-weight: lighter;
+  font-size: .8em;
+  line-height: 1.2em;
+}
+.bus-frequency {
+  text-align: right;
+  line-height: 1.15em;
+}
+.bold_number {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.bus-arrival {
+  text-align: right;
+}
+.bus-box {
+  overflow:hidden;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 5px #DADADA;
+  border-radius: 5px;
+}
+.bus:hover {
+   background: #FCE9CC;
+   text-decoration: underline;
+}
+/* Bus grid information end */
+
 footer {
-  background-color: #BFBFBF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #DADADA;
+  font-size: .8em;
+}
+
+.col {
+  vertical-align: middle;
+  text-align: center;
+  margin: 2% 0;
+  min-width: 57px;
+  float:  left;
+  width: 25%;
 }
 
 #toolnav img {
-  width: 24px;
-  align-items: center;
-  vertical-align: middle;
-  margin-top: 5px;
-  margin-bottom: 7px;
+  width: 24px!important;
+  height: 24px!important;
 }
-#toolnav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-}
-
- /* <!-- small cellphones  --> */
-@media only screen (min-width: 320px) {
-#map img {
-  width: 310px;
-}
-/* <!-- madium cellphones  --> */
-@media only screen (min-width: 375px) {
-#map img {
- width: 360px;
-}
-}
-/* <!--large ce,,cellphones  --> */
-@media only screen and (min-width: 411px) {
-  #map img {
-    width: 400px;
-  }
-}
-/* <!-- grid-template-columns: 200px 1fr 2fr min-content; --> */
-/* <!-- grid-template-columns: 1fr minmax(200px, 1fr); --> */
